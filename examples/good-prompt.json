@@ -1,0 +1,26 @@
+{
+  "image_type": "fake-tweet-testimonial",
+  "aspect_ratio": "9:16 vertical",
+  "layout": "pixel-perfect Twitter/X mobile UI, full-width tweet card on white background",
+  "layout_constraints": "all elements must fit fully within frame with no cutoff or truncation",
+  "profile": {
+    "avatar": "American woman late 40s, brown hair with gray streaks, warm tired smile, casual home photo",
+    "display_name": "Sarah M.",
+    "handle": "@sarah_mom_of3",
+    "checkmark": "blue verified",
+    "timestamp": "Mar 8"
+  },
+  "tweet_text": "My husband has finished in under two minutes for 12 years. I stopped saying anything because what's the point. He started using this device that trains the muscle that controls it. Week 3 he lasted so long I asked if he took something. He said no. It's just the muscle finally working. I'm still in shock.",
+  "embedded_image": {
+    "scene_description": "bedroom nightstand with device charging, morning coffee, sunlight through curtains, unmade bed in background",
+    "product_visibility": "prominent",
+    "product_reference": {
+      "image_index": 1,
+      "placement": "on nightstand, right of coffee mug, charging cable attached",
+      "scale": "actual device size ~4 inches tall",
+      "lighting_match": "warm morning sunlight from window, soft shadows"
+    }
+  },
+  "engagement_bar": "1.2k replies, 3.4k retweets, 12.1k likes, 41k views",
+  "negative_prompt": "wrong twitter interface, old twitter design, explicit content, clinical setting, young couple, elements cut off, text truncated, generic product render, wrong product shape"
+}

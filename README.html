@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConceptEngine — Setup</title>
+    <style>
+        /* PromptedOS Design System */
+        :root {
+            /* Colors */
+            --bg-page: #F8F8F7;
+            --bg-white: #ffffff;
+            --bg-blue: #EBF9FF;
+            --bg-purple: #F7F1FF;
+            --bg-yellow: #FFFDE7;
+            --bg-green: #E8F5E9;
+
+            /* Accent Colors */
+            --accent-teal: #53DBC9;
+            --accent-yellow: #FFDE00;
+            --accent-purple: #9D4EDD;
+            --accent-red: #E53935;
+
+            /* Text Colors */
+            --text-black: #000000;
+            --text-dark: #1a1a1a;
+            --text-gray: #4a4a4a;
+            --text-muted: #6b6b6b;
+
+            /* Shadows */
+            --shadow-lg: -0.31rem 0.31rem 0 0 #383838;
+            --shadow-sm: -0.19rem 0.19rem 0 0 #383838;
+
+            /* Border */
+            --border: 2px solid black;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--bg-page);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* Typography */
+        .font-mono {
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+        }
+
+        h1 {
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--text-black);
+        }
+
+        h2 {
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-black);
+        }
+
+        h3 {
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--text-black);
+        }
+
+        h4 {
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-gray);
+        }
+
+        /* Header Card */
+        .header-card {
+            background: var(--bg-white);
+            border: var(--border);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header-icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--accent-teal);
+            border: var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+            margin-top: 0.5rem;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: var(--bg-white);
+            border: var(--border);
+            margin: 2rem 0;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .section-card-header {
+            padding: 1rem 1.5rem;
+            border-bottom: var(--border);
+            background: var(--bg-page);
+        }
+
+        .section-card-header h2 {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+
+        .section-card-content {
+            padding: 1.5rem;
+        }
+
+        .section-card-content p {
+            margin-bottom: 1rem;
+        }
+
+        .section-card-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Step Cards */
+        .step-card {
+            background: var(--bg-blue);
+            border: var(--border);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .step-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background: var(--accent-teal);
+            border: var(--border);
+            border-radius: 50%;
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 0.875rem;
+            font-weight: 700;
+        }
+
+        .step-title {
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .step-card p {
+            margin: 0.75rem 0 0 0;
+            color: var(--text-dark);
+        }
+
+        .step-card p:first-of-type {
+            margin-top: 0;
+        }
+
+        /* Code blocks */
+        code {
+            background: var(--bg-white);
+            border: 1px solid #ccc;
+            padding: 0.125rem 0.5rem;
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 0.875rem;
+        }
+
+        .code-block {
+            background: var(--text-dark);
+            color: var(--accent-teal);
+            border: var(--border);
+            padding: 1rem 1.25rem;
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 0.9375rem;
+            margin: 1rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Conversation mockup */
+        .conversation {
+            background: var(--bg-purple);
+            border: var(--border);
+            padding: 1.25rem;
+            margin: 1rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .conversation-line {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--accent-purple);
+        }
+
+        .conversation-line:last-child {
+            margin-bottom: 0;
+        }
+
+        .conversation-label {
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 0.6875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .conversation-label.you {
+            color: var(--accent-purple);
+        }
+
+        .conversation-label.claude {
+            color: var(--text-muted);
+        }
+
+        .conversation-text {
+            color: var(--text-dark);
+            font-size: 0.9375rem;
+        }
+
+        /* Output preview */
+        .output-box {
+            background: var(--bg-green);
+            border: var(--border);
+            padding: 1.25rem;
+            margin: 1rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .output-box h4 {
+            color: #2e7d32;
+            margin-bottom: 1rem;
+        }
+
+        .output-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .output-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .output-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--accent-teal);
+            border: var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .output-details h3 {
+            font-size: 0.9375rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .output-details p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* Tips list */
+        ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+        }
+
+        li strong {
+            color: var(--text-black);
+        }
+
+        /* Folder tree */
+        .folder-tree {
+            background: var(--text-dark);
+            color: #e0e0e0;
+            border: var(--border);
+            padding: 1.25rem;
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 0.875rem;
+            line-height: 1.8;
+            margin: 1rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .folder-tree .folder {
+            color: var(--accent-teal);
+        }
+
+        .folder-tree .file {
+            color: #e0e0e0;
+        }
+
+        .folder-tree .comment {
+            color: var(--text-muted);
+        }
+
+        /* Warning box */
+        .warning-box {
+            background: var(--bg-yellow);
+            border: var(--border);
+            padding: 1.25rem;
+            margin: 1rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .warning-box p {
+            margin: 0;
+        }
+
+        .time-note {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .header-card,
+            .section-card-content,
+            .step-card {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header-card">
+        <div class="header-icon">⚡</div>
+        <h1>ConceptEngine</h1>
+        <p class="subtitle">Turn any landing page into ready-to-use ad image prompts.</p>
+    </div>
+
+    <!-- What This Does -->
+    <div class="section-card">
+        <div class="section-card-header">
+            <h2>What This Does</h2>
+        </div>
+        <div class="section-card-content">
+            <p>You give it a landing page — either a URL or an HTML file on your computer. It reads the page, figures out who the product is for and what problems it solves, then writes image generation prompts based on 151 real ad examples.</p>
+            <p>Each prompt is designed to paste directly into an image generator like Midjourney, DALL-E, or Flux. You get back an HTML file with all the prompts, each with a copy button and a preview of the reference ad it's based on.</p>
+        </div>
+    </div>
+
+    <!-- One-Time Setup -->
+    <div class="section-card">
+        <div class="section-card-header">
+            <h2>One-Time Setup</h2>
+        </div>
+        <div class="section-card-content">
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-num">1</span>
+                    <span class="step-title">Put this folder in the right place</span>
+                </div>
+                <p>Copy this entire <code>concept-engine</code> folder into your Claude Code skills folder:</p>
+                <div class="code-block">~/.claude/skills/</div>
+                <p>If the <code>skills</code> folder doesn't exist yet, create it. The <code>~</code> means your home folder — on Mac that's <code>/Users/yourname/</code>.</p>
+            </div>
+            <p>That's it for setup. The folder is about 52MB because it includes all 151 reference images — this means it works offline.</p>
+        </div>
+    </div>
+
+    <!-- How to Use It -->
+    <div class="section-card">
+        <div class="section-card-header">
+            <h2>How to Use It</h2>
+        </div>
+        <div class="section-card-content">
+            <h3>Starting the skill</h3>
+            <p>Open your terminal and start Claude Code by typing <code>claude</code>. Once Claude is running, type:</p>
+            <div class="code-block">/concept-engine</div>
+            <p>This tells Claude to use the ad concepts skill.</p>
+
+            <h3 style="margin-top: 1.5rem;">What Claude will ask you</h3>
+            <p>After you run the command, Claude will ask for a landing page. You can give it:</p>
+            <ul>
+                <li>A URL — like <code>https://example.com/product</code></li>
+                <li>A file path — like <code>/Users/you/Desktop/landing-page.html</code></li>
+            </ul>
+
+            <div class="conversation">
+                <div class="conversation-line">
+                    <div class="conversation-label you">You</div>
+                    <div class="conversation-text">/concept-engine</div>
+                </div>
+                <div class="conversation-line">
+                    <div class="conversation-label claude">Claude</div>
+                    <div class="conversation-text">I'll generate ad concepts for you. What's the landing page URL or file path?</div>
+                </div>
+                <div class="conversation-line">
+                    <div class="conversation-label you">You</div>
+                    <div class="conversation-text">https://myproduct.com/sales-page</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 1.5rem;">What happens next</h3>
+            <p>Claude reads the landing page and does a few things:</p>
+            <ul>
+                <li><strong>Figures out the customer</strong> — who they are, what problem they have, what they want</li>
+                <li><strong>Picks ad formats</strong> — selects 5-15 reference ads from the swipe file that fit this product</li>
+                <li><strong>Writes prompts</strong> — creates image generation prompts based on each reference ad, using your product's copy and messaging</li>
+                <li><strong>Creates an HTML file</strong> — puts everything in a single file you can open in your browser</li>
+            </ul>
+            <p class="time-note">This usually takes 2-5 minutes depending on the landing page length.</p>
+
+            <h3 style="margin-top: 1.5rem;">What you get</h3>
+            <div class="output-box">
+                <h4>Your output file includes</h4>
+                <div class="output-item">
+                    <div class="output-icon">📋</div>
+                    <div class="output-details">
+                        <h3>Copy-paste prompts</h3>
+                        <p>Each prompt has a button. Click it, the prompt is copied. Paste it into your image generator.</p>
+                    </div>
+                </div>
+                <div class="output-item">
+                    <div class="output-icon">🖼️</div>
+                    <div class="output-details">
+                        <h3>Reference images</h3>
+                        <p>Above each prompt you'll see the real ad it's based on, so you know what style to expect.</p>
+                    </div>
+                </div>
+                <div class="output-item">
+                    <div class="output-icon">📱</div>
+                    <div class="output-details">
+                        <h3>Mobile-friendly HTML</h3>
+                        <p>Dark theme, works on your phone if you want to generate images from there.</p>
+                    </div>
+                </div>
+            </div>
+            <p>Claude will tell you where the file is saved. Open it in your browser to see all your prompts.</p>
+        </div>
+    </div>
+
+    <!-- Tips -->
+    <div class="section-card">
+        <div class="section-card-header">
+            <h2>Tips</h2>
+        </div>
+        <div class="section-card-content">
+            <ul>
+                <li><strong>Better landing pages = better prompts.</strong> If the page clearly explains the product, problem, and customer, the prompts will be more specific.</li>
+                <li><strong>You can ask for more.</strong> After the first batch, you can say "give me 5 more focused on social proof" or "more testimonial-style ads."</li>
+                <li><strong>Product images help.</strong> If you have product photos in the same folder as your landing page, Claude can reference them in the prompts.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- What's in This Folder -->
+    <div class="section-card">
+        <div class="section-card-header">
+            <h2>What's in This Folder</h2>
+        </div>
+        <div class="section-card-content">
+            <div class="folder-tree">
+                <span class="folder">concept-engine/</span><br>
+                &nbsp;&nbsp;<span class="file">SKILL.md</span> <span class="comment">— the instructions Claude follows</span><br>
+                &nbsp;&nbsp;<span class="file">README.html</span> <span class="comment">— this file</span><br>
+                &nbsp;&nbsp;<span class="folder">references/</span> <span class="comment">— copywriting methodology and templates</span><br>
+                &nbsp;&nbsp;<span class="folder">examples/</span> <span class="comment">— example of a good prompt</span><br>
+                &nbsp;&nbsp;<span class="folder">swipe-file/</span> <span class="comment">— 151 reference ads + their schemas</span>
+            </div>
+            <p>You don't need to open or edit any of these files. They're there for Claude to read.</p>
+        </div>
+    </div>
+
+    <!-- Troubleshooting -->
+    <div class="section-card">
+        <div class="section-card-header">
+            <h2>If Something Doesn't Work</h2>
+        </div>
+        <div class="section-card-content">
+            <p><strong>Claude doesn't recognize the command:</strong> Make sure the folder is named exactly <code>concept-engine</code> and is inside <code>~/.claude/skills/</code>. The full path should be:</p>
+            <div class="code-block">/Users/yourname/.claude/skills/concept-engine/SKILL.md</div>
+
+            <p style="margin-top: 1.5rem;"><strong>Copy buttons don't work:</strong> If you're viewing the output file through a local server over HTTP (not HTTPS), the copy button uses a fallback method. It should still work, but if it doesn't, you can select the text manually and copy it.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

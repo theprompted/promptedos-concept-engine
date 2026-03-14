@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Product Name] Ad Concepts — [Date]</title>
+    <style>
+        /* PromptedOS Design System */
+        :root {
+            --bg-page: #F8F8F7;
+            --bg-white: #ffffff;
+            --bg-blue: #EBF9FF;
+            --bg-purple: #F7F1FF;
+            --bg-yellow: #FFFDE7;
+            --bg-green: #E8F5E9;
+            --accent-teal: #53DBC9;
+            --accent-yellow: #FFDE00;
+            --accent-purple: #9D4EDD;
+            --accent-red: #E53935;
+            --text-black: #000000;
+            --text-dark: #1a1a1a;
+            --text-gray: #4a4a4a;
+            --text-muted: #6b6b6b;
+            --shadow-lg: -0.31rem 0.31rem 0 0 #383838;
+            --shadow-sm: -0.19rem 0.19rem 0 0 #383838;
+            --border: 2px solid black;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            background: var(--bg-white);
+            border: var(--border);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header-icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--accent-teal);
+            border: var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .header h1 {
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-black);
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: var(--text-muted);
+            font-size: 0.9375rem;
+        }
+
+        /* Format Group */
+        .format-group {
+            margin-bottom: 3rem;
+        }
+
+        .format-title {
+            background: var(--bg-blue);
+            border: var(--border);
+            padding: 1rem 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-black);
+        }
+
+        /* Prompt Card */
+        .prompt-card {
+            background: var(--bg-white);
+            border: var(--border);
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .prompt-header {
+            background: var(--bg-page);
+            padding: 1rem 1.5rem;
+            border-bottom: var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .prompt-title {
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+            font-weight: 700;
+            color: var(--text-black);
+        }
+
+        .prompt-type {
+            background: var(--accent-teal);
+            border: var(--border);
+            color: var(--text-black);
+            padding: 0.25rem 0.75rem;
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .prompt-body {
+            padding: 1.5rem;
+        }
+
+        .reference-img {
+            width: 100%;
+            max-width: 400px;
+            border: var(--border);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .prompt-text {
+            background: var(--text-dark);
+            color: var(--accent-teal);
+            border: var(--border);
+            padding: 1.25rem;
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 0.8125rem;
+            white-space: pre-wrap;
+            word-break: break-word;
+            margin-bottom: 1.5rem;
+            max-height: 400px;
+            overflow-y: auto;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .copy-btn {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: var(--accent-teal);
+            color: var(--text-black);
+            border: var(--border);
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.1s ease;
+        }
+
+        .copy-btn:hover {
+            transform: translate(2px, -2px);
+            box-shadow: -0.4rem 0.4rem 0 0 #383838;
+        }
+
+        .copy-btn:active {
+            transform: translate(-2px, 2px);
+            box-shadow: -0.1rem 0.1rem 0 0 #383838;
+        }
+
+        .copy-btn.copied {
+            background: var(--bg-green);
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 1rem; }
+            .header, .prompt-body { padding: 1.25rem; }
+            .prompt-text { font-size: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="header-icon">⚡</div>
+        <h1>[Product Name] Ad Concepts</h1>
+        <p>Generated [Date] — [X] prompts via /concept-engine</p>
+    </div>
+
+    <!-- EXAMPLE FORMAT GROUP — Duplicate this structure for each format -->
+    <div class="format-group">
+        <h2 class="format-title">Format 1: [Format Name from Schema]</h2>
+
+        <div class="prompt-card">
+            <div class="prompt-header">
+                <span class="prompt-title">1A. [Brief Description]</span>
+                <span class="prompt-type">[Schema ID, e.g. 011]</span>
+            </div>
+            <div class="prompt-body">
+                <!-- Image path MUST be root-relative, starting with / -->
+                <img src="/.claude/skills/concept-engine/swipe-file/images/[FILENAME].jpeg" alt="Reference" class="reference-img">
+
+                <!-- JSON goes directly in div — NO HTML ESCAPING -->
+                <!-- Notice the deeply nested structure — this is REQUIRED -->
+                <div class="prompt-text" id="prompt-1a">{
+  "format": "split-comparison-us-vs-them",
+  "aspect_ratio": "1:1 square",
+  "composition": {
+    "layout": "vertical split, 50/50 left-right",
+    "divider": "implied by color change, no visible line"
+  },
+  "left_side_us": {
+    "brand_label": {
+      "text": "[BRAND NAME]",
+      "position": "top of left panel, centered",
+      "typography": "minimal sans-serif, all caps"
+    },
+    "background": {
+      "color": "warm cream/tan (#E8DFD0)",
+      "feeling": "comfort, reliability, engineered"
+    },
+    "icon_metaphor": {
+      "description": "simple circle with single centered dot",
+      "symbolism": "simplicity, solved problem, no decisions needed",
+      "style": "minimal line drawing, dark outline"
+    },
+    "product_photography": {
+      "container": "[product in use or being held]",
+      "product_details": "[specific visual details from product]",
+      "hand": "natural grip, authentic interaction"
+    }
+  },
+  "right_side_them": {
+    "label": "[competitor category]",
+    "background": {
+      "color": "cool light gray (#E5E5E5)",
+      "feeling": "cold, disappointing, frustrating"
+    },
+    "icon_metaphor": {
+      "description": "chaotic scribbled ball of tangled lines",
+      "symbolism": "complexity, constant problems"
+    },
+    "product_photography": {
+      "container": "[failed competitor product]",
+      "condition": "[specific failure state]"
+    }
+  },
+  "text_overlay": {
+    "content": "[Consumer copy from Hell/Heaven Island mapping]",
+    "position": "bottom center",
+    "typography": {
+      "font": "sans-serif bold",
+      "color": "white on dark background"
+    }
+  },
+  "color_story": {
+    "primary": "[product's dominant color]",
+    "accent": "[highlight color]",
+    "contrast": "[what creates visual tension]"
+  },
+  "constraints": {
+    "must_keep": [
+      "deeply nested structure preserved from schema",
+      "specific visual details, not generic descriptions",
+      "consumer copy from mapping, not product features"
+    ],
+    "avoid": [
+      "flat text descriptions",
+      "generic placeholder language",
+      "missing nested objects"
+    ]
+  },
+  "negative_prompt": [
+    "elements cut off",
+    "text truncated",
+    "busy backgrounds",
+    "generic stock photo feel"
+  ]
+}</div>
+                <button class="copy-btn" onclick="copyPrompt('prompt-1a', this)">Copy Prompt</button>
+            </div>
+        </div>
+
+        <!-- Additional prompts in same format group use 1b, 1c, etc. -->
+    </div>
+
+    <!-- FORMAT 2, 3, etc. follow same structure -->
+</div>
+
+<!-- CRITICAL: This exact script block makes copy work. Do not modify. -->
+<script>
+    function copyPrompt(elementId, button) {
+        var text = document.getElementById(elementId).textContent;
+        var textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+            document.execCommand('copy');
+            button.textContent = '✓ Copied!';
+            button.classList.add('copied');
+            setTimeout(function() {
+                button.textContent = 'Copy Prompt';
+                button.classList.remove('copied');
+            }, 2000);
+        } catch (err) {
+            button.textContent = 'Select & copy manually';
+            var el = document.getElementById(elementId);
+            var range = document.createRange();
+            range.selectNodeContents(el);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+        }
+        document.body.removeChild(textarea);
+    }
+</script>
+</body>
+</html>

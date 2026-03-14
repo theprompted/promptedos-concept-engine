@@ -1,0 +1,271 @@
+[
+  {
+    "reference_ad_id": "126",
+    "format_type": "testimonial-keyword-highlight-product-hero",
+    "aspect_ratio": "4:5 or 1:1",
+    "composition": "text-heavy upper half, product hero lower half",
+    "subject": {
+      "description": "No human subject visible. Product-only hero with testimonial overlay.",
+      "type": "product-only"
+    },
+    "product": {
+      "name": "Grunt Style Size Matters T-Shirt",
+      "type": "black crew neck tee",
+      "design": {
+        "text_main": "SIZE MATTERS in distressed white block letters",
+        "graphic": "six bullet calibers shown side-by-side with measurements (.50 CAL 5.450in down to .22 LR 0.985in)",
+        "sleeve_detail": "American flag on right sleeve, Grunt Style logo on left"
+      },
+      "position": "center-lower 45% of frame, slight 3/4 angle showing front of shirt",
+      "additional_elements": "a few loose brass bullet casings scattered beside the folded shirt"
+    },
+    "text_overlay": {
+      "headline_quote": {
+        "content": "Wore this to the range. Three guys stopped me before I even got to my lane. Now it's the only shirt I wear on Saturdays.",
+        "attribution": "- CHARLES T., Verified Buyer",
+        "position": "upper portion, above product",
+        "typography": {
+          "main_font": "bold condensed sans-serif",
+          "size": "large, dominant",
+          "color": "white on dark background or dark on light",
+          "quotation_marks": "oversized"
+        },
+        "keyword_highlights": [
+          {
+            "word": "Three guys stopped me",
+            "highlight_style": "white text on black pill-shaped background",
+            "purpose": "social proof, tribal recognition"
+          },
+          {
+            "word": "only shirt I wear",
+            "highlight_style": "white text on black pill-shaped background",
+            "purpose": "loyalty, repeat behavior"
+          }
+        ]
+      },
+      "disclaimer": {
+        "content": "Real customer experience.",
+        "position": "bottom of frame, full width",
+        "typography": "very small gray text"
+      }
+    },
+    "photography": {
+      "shot_type": "product hero with studio setup",
+      "angle": "straight-on, eye level with product",
+      "lighting": {
+        "type": "soft studio lighting",
+        "quality": "clean, even, professional",
+        "shadows": "subtle soft shadow beneath shirt"
+      }
+    },
+    "background": {
+      "color": "clean white/off-white or tactical gray",
+      "setting": "studio or composited",
+      "purpose": "maximizes contrast with black product, keeps focus on testimonial and shirt"
+    },
+    "color_story": {
+      "primary": "black shirt",
+      "secondary": "white/gray background",
+      "accent": "brass/gold bullet graphics pop",
+      "text": "white or dark depending on background",
+      "overall": "tactical, masculine, clean"
+    },
+    "constraints": {
+      "must_keep": [
+        "pill-shaped highlight on key phrases",
+        "first-person testimonial quote format",
+        "attribution with name",
+        "clean background",
+        "shirt visible as hero product",
+        "bullet graphic clearly visible"
+      ],
+      "avoid": [
+        "lifestyle imagery that distracts from product",
+        "multiple products cluttering frame",
+        "person/model in shot",
+        "busy colorful backgrounds"
+      ]
+    },
+    "negative_prompt": [
+      "person in shot",
+      "model",
+      "lifestyle photography",
+      "busy background",
+      "pastel colors",
+      "harsh shadows"
+    ]
+  },
+  {
+    "reference_ad_id": "129",
+    "format_type": "intimate-testimonial-product-hero",
+    "aspect_ratio": "4:5 vertical",
+    "composition": "product anchored in lower center, testimonial fills upper negative space",
+    "subject": {
+      "description": "No human subject visible. Hero is the Size Matters shirt with bullet casing props as supporting visual element.",
+      "type": "product-only"
+    },
+    "product": {
+      "name": "Grunt Style Size Matters T-Shirt",
+      "type": "black crew neck tee, folded or flat",
+      "design": {
+        "text_main": "SIZE MATTERS in distressed white block letters",
+        "graphic": "six bullet calibers with measurements"
+      },
+      "position": "center-bottom of frame, dominant visual element",
+      "additional_elements": "scattered brass casings and one or two loose rounds beside shirt for context"
+    },
+    "text_overlay": {
+      "testimonial_quote": {
+        "content": "My wife rolled her eyes when I ordered it. Then she saw three strangers high-five me at the BBQ. Now she wants to know if they make one for women.",
+        "attribution": "- TONY D.",
+        "style": {
+          "font": "bold sans-serif with mixed weights",
+          "color": "white on dark or dark on light",
+          "emphasis": "high-five me in italic for emotional punch",
+          "quotation_marks": "large decorative"
+        },
+        "position": "upper third of frame, centered"
+      },
+      "disclaimer": {
+        "content": "Real customer experience.",
+        "style": "tiny light gray text",
+        "position": "bottom edge of frame"
+      }
+    },
+    "photography": {
+      "shot_type": "product hero shot with testimonial overlay",
+      "angle": "straight-on, slightly elevated looking down at product",
+      "aspect_ratio": "4:5 vertical",
+      "lighting": {
+        "type": "soft studio, diffused",
+        "quality": "clean, bright",
+        "shadows": "subtle shadow beneath shirt"
+      }
+    },
+    "background": {
+      "type": "gradient or solid",
+      "colors": {
+        "option_1": "tactical dark gray to black",
+        "option_2": "americana red accent vignette"
+      },
+      "purpose": "masculine, patriotic energy"
+    },
+    "color_story": {
+      "primary": "black product",
+      "secondary": "dark tactical background",
+      "accent": "brass bullet casings add warmth",
+      "text": "white on dark background",
+      "overall": "range-day energy, brotherhood"
+    },
+    "constraints": {
+      "must_keep": [
+        "testimonial shows wife skeptic → converted arc",
+        "social proof moment (strangers recognizing)",
+        "italic emphasis on emotional payoff phrase",
+        "shirt as hero element in lower portion",
+        "bullet props showing product context",
+        "first name attribution"
+      ],
+      "avoid": [
+        "clinical language",
+        "before/after comparisons",
+        "multiple testimonials",
+        "bright feminine colors"
+      ]
+    },
+    "negative_prompt": [
+      "person in frame",
+      "before after comparison",
+      "pastel colors",
+      "pink",
+      "crowded layout",
+      "horizontal composition",
+      "generic stock photo"
+    ]
+  },
+  {
+    "reference_ad_id": "130",
+    "format_type": "testimonial-product-hero-bold-color",
+    "aspect_ratio": "4:5 or 1:1",
+    "composition": "bold flat-graphic product hero with testimonial overlay on high-contrast background",
+    "subject": {
+      "description": "No human in frame. Product-only hero with scattered props.",
+      "type": "product-only"
+    },
+    "product": {
+      "name": "Grunt Style Size Matters T-Shirt",
+      "type": "black crew neck tee",
+      "design": {
+        "text_main": "SIZE MATTERS in distressed white",
+        "graphic": "bullet caliber comparison chart"
+      },
+      "position": "center anchor, 50% of frame",
+      "additional_elements": "two or three loose brass casings scattered in front"
+    },
+    "text_overlay": {
+      "testimonial_quote": {
+        "content": "Bought it as a joke for my husband. He's worn it every weekend since. His range buddies all ordered one.",
+        "attribution": "— CHELSEA C.",
+        "typography": {
+          "font_style": "bold condensed sans-serif",
+          "color": "dark gray/black or white depending on background",
+          "emphasis": {
+            "highlighted_phrase": "every weekend since",
+            "highlight_style": "bright yellow highlighter marker effect behind text",
+            "caps_emphasis": "range buddies all ordered one in emphasis"
+          }
+        },
+        "position": "top third of frame, centered"
+      },
+      "disclaimer": {
+        "content": "Real customer experience.",
+        "position": "bottom edge of frame",
+        "typography": "small sans-serif"
+      }
+    },
+    "photography": {
+      "shot_type": "flat graphic product photography, bold colors",
+      "angle": "straight-on, slightly elevated",
+      "lighting": {
+        "type": "flat studio lighting, no harsh shadows",
+        "quality": "even, commercial, punchy"
+      }
+    },
+    "background": {
+      "color": "americana red or tactical olive green",
+      "texture": "solid flat color, no gradient",
+      "purpose": "maximum contrast with black product, patriotic energy"
+    },
+    "color_story": {
+      "primary": "red or olive background",
+      "secondary": "black shirt — bold contrast",
+      "accent": "yellow highlighter on key copy",
+      "contrast_strategy": "complementary color contrast creates maximum visual impact"
+    },
+    "constraints": {
+      "must_keep": [
+        "bold flat background color (americana, not pastel)",
+        "black shirt as product hero",
+        "yellow highlighter on key phrase",
+        "testimonial with gift-giver perspective",
+        "viral spread element (buddies ordered)",
+        "flat graphic design aesthetic"
+      ],
+      "avoid": [
+        "white or neutral background",
+        "lifestyle imagery with models",
+        "vague testimonial",
+        "cluttered composition"
+      ]
+    },
+    "negative_prompt": [
+      "white background",
+      "pastel colors",
+      "muted palette",
+      "lifestyle photography",
+      "model holding product",
+      "gradient backgrounds",
+      "stock photo aesthetic"
+    ]
+  }
+]
