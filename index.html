@@ -400,21 +400,31 @@
             <div class="step-card">
                 <div class="step-header">
                     <span class="step-num">1</span>
-                    <span class="step-title">Install Claude Code</span>
+                    <span class="step-title">Install Homebrew (if you don't have it)</span>
                 </div>
                 <p>Open your terminal and run:</p>
-                <div class="code-block">npm install -g @anthropic-ai/claude-code</div>
-                <p>This requires Node.js. If you don't have it:</p>
-                <div class="code-block">brew install node</div>
-                <p>Don't have Homebrew? Install it first:</p>
                 <div class="code-block">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</div>
             </div>
             <div class="step-card">
                 <div class="step-header">
                     <span class="step-num">2</span>
+                    <span class="step-title">Install Node.js</span>
+                </div>
+                <div class="code-block">brew install node</div>
+            </div>
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-num">3</span>
+                    <span class="step-title">Install Claude Code</span>
+                </div>
+                <div class="code-block">npm install -g @anthropic-ai/claude-code</div>
+            </div>
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-num">4</span>
                     <span class="step-title">Sign in to Claude</span>
                 </div>
-                <p>Run <code>claude</code> in your terminal. The first time, it will open a browser window to sign in with your Anthropic account.</p>
+                <p>Run <code>claude</code> in your terminal. It will open a browser window to sign in with your Anthropic account.</p>
             </div>
             <p>Once Claude Code is installed and you're signed in, you're ready to add ConceptEngine.</p>
         </div>
